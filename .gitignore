@@ -1,0 +1,13 @@
+node_modules/
+dist/
+@mf-types/
+.mf/
+.tmp/
+.vite/
+.history/
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+*.tsbuildinfo

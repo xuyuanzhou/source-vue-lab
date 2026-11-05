@@ -1,0 +1,34 @@
+# 生成物与依赖目录
+node_modules
+dist
+coverage
+
+# 编辑器本地历史副本
+.history
+
+# Federation 构建期生成的类型产物
+@mf-types
+
+# 锁文件由 npm 维护，格式化会与 npm 的写入结果互相打架
+package-lock.json
+
+# 课文正文与可跑的小实验：是「内容」不是「代码」，格式化会与源稿不一致
+content
+mini-vue
+
+# Lab 原样迁入的内部实现与它自带的校验脚本：排版刻意紧凑，格式化只会让它们
+# 与上游源稿对不上（`course.ts` 的单行章节目录还被 `scripts/verify.mjs` 按字面匹配）。
+# 本仓新增的契约入口（`src/index.ts` / `src/desktop/` / `src/router.ts` 等）不在其列。
+scripts
+src/App.vue
+src/components
+src/composables
+src/data
+src/features
+src/views
+
+# 本地静态资源
+public
+
+# 说明文档不纳入代码风格门禁
+*.md

@@ -1,0 +1,59 @@
+{
+  "name": "source-vue-lab",
+  "private": true,
+  "version": "0.1.0",
+  "servumiModule": {
+    "domain": "learning",
+    "runtime": "vue",
+    "title": {
+      "zh-cn": "Vue 源码实验室"
+    },
+    "summary": {
+      "zh-cn": "沿着 Vue 3.5 真实源码读编译器、响应式与运行时。"
+    },
+    "group": "learn",
+    "order": 50,
+    "apiPrefix": "",
+    "publicAccess": "none"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "check:module": "servumi-module-check",
+    "build": "npm run check:module && vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "node --test mini-vue/test/*.test.mjs && node scripts/verify.mjs",
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "vue-tsc -b"
+  },
+  "dependencies": {
+    "@vue/compiler-dom": "^3.5.43",
+    "highlight.js": "^11.11.1",
+    "lucide-vue-next": "^0.468.0",
+    "markdown-it": "^14.1.0",
+    "servumi-web-commons": "file:../servumi-web-commons",
+    "vue": "^3.5.43",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@module-federation/vite": "^1.23.5",
+    "@servumi/module-contract": "git+https://github.com/xuyuanzhou/servumi-module-contract.git#semver:^0.1.0",
+    "@types/markdown-it": "^14.1.2",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.12.0",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.72.0",
+    "vite": "^8.3.0",
+    "vue-tsc": "^3.3.14"
+  }
+}
